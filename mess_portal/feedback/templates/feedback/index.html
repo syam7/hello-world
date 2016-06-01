@@ -1,0 +1,7 @@
+<form action="{% url 'handling_data' %}" method = "post" >
+{% csrf_token %}
+subject : <input type = "text" style = "width:500px" name = "subject" ><br><br>
+feedback : <br>
+<textarea name="Text1" cols="40" rows="5" ... ></textarea><br><br>
+<input type="submit" value = "submit" >
+</form>

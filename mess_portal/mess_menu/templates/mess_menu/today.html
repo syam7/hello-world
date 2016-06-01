@@ -1,0 +1,10 @@
+<ul>
+{% for day in day_list %}
+	{% if today_name == day.day_name %}
+		<li><a href = "/mess_menu/{{ day.id }}/"><b>Click here for Today's Menu</b></a></li><br>
+	{% endif %}
+{% endfor %}
+
+<li><a href = "/mess_menu/"><b>This Week's Menu</b></a></li><br>
+
+</ul>

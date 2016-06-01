@@ -1,0 +1,7 @@
+<h1>{{ day.day_name }}'s Menu</h1>
+
+<ul>
+{% for food in day.food_set.all %}
+    <li>{{ food.food_time }}</li><br>
+{% endfor %}
+</ul>

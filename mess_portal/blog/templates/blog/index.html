@@ -1,0 +1,13 @@
+<form action="{% url 'blog:question' %}" method="post"> 
+{% csrf_token %}
+ <h4>Add a Question:</h4>
+	<textarea name="Text1" cols="40" rows="5" ... ></textarea><br><br>
+	<input type="submit" value="add">
+</form>
+<h4>Questions asked by others:</h4>
+<ul>
+
+{% for question in all_questions  %}
+	<li> <a href="{% url 'blog:detail' question.id %}"> {{ question.question_text }} </a>  </li>
+{% endfor %}
+</ul>
